@@ -46,21 +46,6 @@
   pointer-events: none;
 }
 
-/* Fallback background image */
-.background-fallback {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url('/assets/landing-background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: -3;
-  pointer-events: none;
-}
-
 .main::before {
   content: '';
   position: fixed;
