@@ -201,30 +201,51 @@
 .cta-button {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  background: #ffffff;
+  justify-content: space-between;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.9);
   color: #000000;
-  padding: 1rem 2rem;
-  border-radius: 30px;
+  padding: 0.8rem 1rem 0.8rem 2rem;
+  border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  min-width: 280px;
 }
 
 .cta-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  background: #f8f8f8;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 1);
+}
+
+.play-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #000000;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover .play-icon-container {
+  transform: scale(1.1);
+  background: #1a1a1a;
 }
 
 .play-icon {
-  width: 20px;
-  height: 20px;
-  fill: #000000;
+  width: 16px;
+  height: 16px;
+  fill: #ffffff;
+  margin-left: 2px;
 }
 
 .hero-visual {
@@ -512,8 +533,19 @@
   }
   
   .cta-button {
-    padding: 0.8rem 1.5rem;
+    padding: 0.7rem 0.8rem 0.7rem 1.5rem;
     font-size: 0.9rem;
+    min-width: 250px;
+  }
+  
+  .play-icon-container {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .play-icon {
+    width: 14px;
+    height: 14px;
   }
   
   .trending-card {

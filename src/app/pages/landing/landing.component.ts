@@ -12,14 +12,11 @@ export class LandingComponent {
   ngAfterViewInit() {
     const video = document.querySelector('.background-video') as HTMLVideoElement;
     if (video) {
-      // تأخير تحميل الفيديو لتحسين الأداء
-      setTimeout(() => {
-        video.load();
-        video.addEventListener('canplay', () => {
-          video.setAttribute('data-loaded', 'true');
-          video.play().catch(e => console.log('Video autoplay failed:', e));
-        });
-      }, 1000);
+      video.load();
+      video.addEventListener('canplay', () => {
+        video.setAttribute('data-loaded', 'true');
+        video.play().catch(e => console.log('Video autoplay failed:', e));
+      });
     }
   }
 
