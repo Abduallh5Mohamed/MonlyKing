@@ -28,17 +28,17 @@
   width: 100vw;
   min-height: 100vh;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
 
 .background-video {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
   z-index: -1;
 }
@@ -49,21 +49,22 @@
     display: none;
   }
   
-  .main {
+  .main::before {
     background-image: url('/assets/landing-Background.jpg');
     background-size: cover;
-    background-position: center top;
+    background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 }
 
 .main::before {
   content: '';
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100vw;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.3);
   z-index: 0;
 }
