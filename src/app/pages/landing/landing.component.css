@@ -31,6 +31,7 @@
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  background: #0b1426;
 }
 
 .background-video {
@@ -41,21 +42,22 @@
   height: 100vh;
   object-fit: cover;
   z-index: -1;
+  pointer-events: none;
 }
 
-/* Fallback for devices that don't support autoplay */
-@media (max-width: 768px) {
-  .background-video {
-    display: none;
-  }
-  
-  .main::before {
-    background-image: url('/assets/landing-Background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
+/* Fallback background image */
+.background-fallback {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/assets/landing-Background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+  pointer-events: none;
 }
 
 .main::before {
@@ -65,8 +67,14 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.3);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(11, 20, 38, 0.6) 50%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
   z-index: 0;
+  pointer-events: none;
 }
 
 .content {
@@ -79,6 +87,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  position: relative;
 }
 
 .main-content {
@@ -385,6 +394,10 @@
     min-width: 250px;
     flex-shrink: 0;
   }
+  
+  .background-video {
+    object-position: center center;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -438,6 +451,20 @@
   .king-os {
     min-width: auto;
   }
+  
+  .background-video {
+    object-position: center center;
+    transform: scale(1.1);
+  }
+  
+  .main::before {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(11, 20, 38, 0.7) 50%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -478,5 +505,33 @@
   
   .card-description {
     font-size: 0.7rem;
+  }
+  
+  .background-video {
+    transform: scale(1.2);
+    object-position: center center;
+  }
+  
+  .main::before {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(11, 20, 38, 0.8) 50%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+  }
+}
+
+/* تحسينات إضافية للخلفية المتحركة */
+@media (prefers-reduced-motion: reduce) {
+  .background-video {
+    display: none;
+  }
+}
+
+/* تحسين الأداء للأجهزة الضعيفة */
+@media (max-width: 480px) and (max-height: 800px) {
+  .background-video {
+    transform: scale(1.1);
   }
 }
