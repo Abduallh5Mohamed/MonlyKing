@@ -1,4 +1,7 @@
 <div class="main">
+  <!-- Loading background -->
+  <div class="video-loading"></div>
+  
   <!-- Background Video -->
   <video 
     class="background-video" 
@@ -6,10 +9,10 @@
     muted 
     loop 
     playsinline
-    preload="none"
-    poster="/assets/landing-background.jpg"
+    preload="metadata"
+    poster="assets/landing-background.jpg"
   >
-    <source src="/assets/landing-Background.mp4" type="video/mp4">
+    <source src="assets/landing-Background.mp4" type="video/mp4">
     <!-- Fallback for browsers that don't support video -->
   </video>
   
@@ -17,7 +20,7 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
       <div class="logo">
-        <img src="/assets/Logo.png" alt="MONLY KING" class="logo-image">
+        <img src="assets/Logo.png" alt="MONLY KING" class="logo-image">
       </div>
       
       <ul class="nav-links">

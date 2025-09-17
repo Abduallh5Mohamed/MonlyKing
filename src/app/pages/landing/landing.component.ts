@@ -11,15 +11,33 @@ import { NavigationPillsComponent } from '../../components/navigation-pills/navi
   styleUrl: './landing.component.css'
 })
 export class LandingComponent {
+  
   ngAfterViewInit() {
     const video = document.querySelector('.background-video') as HTMLVideoElement;
     if (video) {
-      video.load();
-      video.addEventListener('canplay', () => {
-        video.setAttribute('data-loaded', 'true');
-        video.play().catch(e => console.log('Video autoplay failed:', e));
+      // Check if video file exists
+      video.addEventListener('loadstart', () => {
+        console.log('Video loading started');
       });
+      
+      video.addEventListener('canplaythrough', () => {
+        console.log('Video can play through');
+        video.setAttribute('data-loaded', 'true');
+        video.play().catch(e => {
+          console.log('Video autoplay failed:', e);
+          // Fallback to static background
+          video.style.display = 'none';
+        });
+      });
+      
+      video.addEventListener('error', (e) => {
+        console.log('Video loading error:', e);
+        // Hide video element if it fails to load
+        video.style.display = 'none';
+      });
+      
+      // Load the video
+      video.load();
     }
   }
-
 }
