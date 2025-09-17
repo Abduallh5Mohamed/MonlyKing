@@ -29,8 +29,7 @@
   min-height: 100vh;
   background-image: url('/assets/landing-Background.jpg');
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-position: center top;
   background-repeat: no-repeat;
   position: relative;
   overflow-x: hidden;
@@ -45,7 +44,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
