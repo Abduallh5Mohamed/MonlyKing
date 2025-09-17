@@ -86,9 +86,8 @@
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  margin: 0;
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -205,7 +204,7 @@
   gap: 1rem;
   background: rgba(255, 255, 255, 0.9);
   color: #000000;
-  padding: 0.8rem 1rem 0.8rem 2rem;
+  padding: 0.6rem 0.6rem 0.6rem 1.8rem;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
@@ -215,7 +214,7 @@
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
-  min-width: 280px;
+  min-width: 260px;
 }
 
 .cta-button:hover {
@@ -228,8 +227,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   background: #000000;
   border-radius: 50%;
   flex-shrink: 0;
@@ -242,8 +241,8 @@
 }
 
 .play-icon {
-  width: 16px;
-  height: 16px;
+  width: 12px;
+  height: 12px;
   fill: #ffffff;
   margin-left: 2px;
 }
@@ -432,7 +431,7 @@
 
 @media screen and (max-width: 768px) {
   .content {
-    font-size: clamp(2.8rem, 7vw, 4.5rem);
+    padding: 0 0.5rem;
   }
   
   .navbar {
@@ -533,19 +532,19 @@
   }
   
   .cta-button {
-    padding: 0.7rem 0.8rem 0.7rem 1.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 1.4rem;
     font-size: 0.9rem;
-    min-width: 250px;
+    min-width: 240px;
   }
   
   .play-icon-container {
-    width: 35px;
-    height: 35px;
+    width: 28px;
+    height: 28px;
   }
   
   .play-icon {
-    width: 14px;
-    height: 14px;
+    width: 10px;
+    height: 10px;
   }
   
   .trending-card {
