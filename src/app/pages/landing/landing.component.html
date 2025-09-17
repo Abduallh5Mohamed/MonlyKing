@@ -8,8 +8,6 @@
     playsinline
     preload="none"
     poster="/assets/landing-background.jpg"
-    onloadstart="this.style.display='block'"
-    oncanplay="this.play()"
   >
     <source src="/assets/landing-Background.mp4" type="video/mp4">
     <!-- Fallback for browsers that don't support video -->
@@ -104,6 +102,9 @@
           <span class="game-count">07</span>
         </div>
       </div>
+      
+      <app-social-links></app-social-links>
+      <app-navigation-pills></app-navigation-pills>
       
       <div class="king-os">
         <h3 class="sidebar-title">KING OS</h3>

@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SocialLinksComponent } from '../../components/social-links/social-links.component';
+import { NavigationPillsComponent } from '../../components/navigation-pills/navigation-pills.component';
 
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SocialLinksComponent, NavigationPillsComponent],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.css'
 })
