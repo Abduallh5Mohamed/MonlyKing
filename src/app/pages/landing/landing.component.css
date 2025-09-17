@@ -44,6 +44,8 @@
   object-position: center center;
   z-index: -2;
   pointer-events: none;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .main::before {
