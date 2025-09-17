@@ -1,0 +1,13 @@
+/* 
+Place the background video file here as: landing-Background.mp4
+The HTML video element will reference this file as: /assets/landing-Background.mp4
+
+Video Requirements:
+- Format: MP4 (H.264 codec recommended)
+- Duration: Loop-friendly (seamless loop)
+- Resolution: 1920x1080 or higher
+- Compression: Optimized for web (balance between quality and file size)
+- Audio: None (video will be muted)
+
+Fallback: On mobile devices, will fallback to landing-Background.jpg
+*/
