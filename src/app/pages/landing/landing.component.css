@@ -169,12 +169,13 @@
 }
 
 .hero-title {
-  font-size: clamp(3rem, 8vw, 5rem);
+  font-size: clamp(4rem, 12vw, 8rem);
   font-weight: 900;
   color: var(--white);
   line-height: 1.1;
   margin: 0 0 1rem 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: -0.02em;
 }
 
 .hero-subtitle {
@@ -189,8 +190,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  background: rgba(255, 255, 255, 0.9);
-  color: #000;
+  background: #ffffff;
+  color: #000000;
   padding: 1rem 2rem;
   border-radius: 30px;
   text-decoration: none;
@@ -205,13 +206,13 @@
 .cta-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  background: var(--white);
+  background: #f8f8f8;
 }
 
 .play-icon {
   width: 20px;
   height: 20px;
-  fill: currentColor;
+  fill: #000000;
 }
 
 .hero-visual {
@@ -423,7 +424,7 @@
   }
   
   .hero-title {
-    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-size: clamp(3rem, 10vw, 6rem);
   }
   
   .hero-subtitle {
@@ -478,7 +479,7 @@
   }
   
   .hero-title {
-    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 8vw, 4rem);
   }
   
   .hero-subtitle {
