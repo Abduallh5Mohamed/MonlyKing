@@ -41,7 +41,8 @@
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  z-index: -1;
+  object-position: center center;
+  z-index: -2;
   pointer-events: none;
 }
 
@@ -52,11 +53,11 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('/assets/landing-Background.jpg');
+  background-image: url('/assets/landing-background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -2;
+  z-index: -3;
   pointer-events: none;
 }
 
