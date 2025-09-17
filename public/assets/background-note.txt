@@ -1,0 +1,2 @@
+/* Note: The background image should be placed at public/assets/landing-background.jpg */
+/* For now, we'll create a CSS background that matches the gaming theme */

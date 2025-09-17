@@ -1,0 +1,11 @@
+<div class="social-links">
+  @for (link of socialLinks; track link.href) {
+    <a
+      [href]="link.href"
+      [attr.aria-label]="link.ariaLabel"
+      target="_blank"
+      rel="noopener"
+      [innerHTML]="link.svgContent"
+    ></a>
+  }
+</div>
