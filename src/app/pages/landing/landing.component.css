@@ -46,6 +46,14 @@
   pointer-events: none;
   min-width: 100%;
   min-height: 100%;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.background-video[data-loaded="true"] {
+  display: block;
+  opacity: 1;
 }
 
 /* Fallback background if video doesn't load */
@@ -96,14 +104,16 @@
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 1.5rem 0;
+  gap: 2rem;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  margin-right: auto;
 }
 
 .logo-image {
@@ -118,6 +128,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-left: auto;
+  margin-right: 1rem;
 }
 
 .nav-links a {
@@ -403,15 +415,28 @@
   }
   
   .navbar {
-    flex-direction: column;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     padding: 1rem 0;
   }
   
+  .logo {
+    order: 1;
+    margin-right: 0;
+  }
+  
+  .connect-wallet {
+    order: 2;
+    margin-left: auto;
+  }
+  
   .nav-links {
+    order: 3;
+    width: 100%;
     gap: 0.5rem;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0.5rem 0 0 0;
   }
   
   .nav-links a {

@@ -2,12 +2,14 @@
   <!-- Background Video -->
   <video 
     class="background-video" 
-    autoplay 
+    autoplay
     muted 
     loop 
     playsinline
-    preload="metadata"
+    preload="none"
     poster="/assets/landing-background.jpg"
+    onloadstart="this.style.display='block'"
+    oncanplay="this.play()"
   >
     <source src="/assets/landing-Background.mp4" type="video/mp4">
     <!-- Fallback for browsers that don't support video -->
